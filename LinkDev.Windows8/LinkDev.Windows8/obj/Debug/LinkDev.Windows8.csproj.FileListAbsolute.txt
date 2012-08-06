@@ -1,0 +1,28 @@
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.dll
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pdb
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pri
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.dll
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.pdb
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LanguageQualifiers.txt
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml.intermediate
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles.intermediate
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles.intermediate
+C:\Users\Bishoy\Documents\Visual Studio 2012\Projects\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles.intermediate
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.dll
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pdb
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pri
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.dll
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.pdb
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml.intermediate
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles.intermediate
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles.intermediate
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles.intermediate
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles
+E:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LanguageQualifiers.txt
