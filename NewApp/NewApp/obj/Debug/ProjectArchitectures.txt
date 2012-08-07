@@ -1,0 +1,2 @@
+C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\LinkDev.Windows8.csproj;neutral
+C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\NewApp.csproj;neutral

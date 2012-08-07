@@ -9,6 +9,10 @@ using Windows.UI.Xaml.Data;
 
 namespace LinkDev.Windows8.Helpers
 {
+    /// <summary>
+    /// A XAML binding converter to bind visibility to a boolean property
+    /// Send the parameter=true if you want to flip the visibility
+    /// </summary>
     public class BooleanToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, String s)

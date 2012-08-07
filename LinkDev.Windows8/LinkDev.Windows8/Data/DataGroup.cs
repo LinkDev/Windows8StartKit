@@ -10,6 +10,9 @@ using Windows.UI.Xaml.Media;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// The class that should be used or inherited to represent a group of items
+    /// </summary>
     public class DataGroup:DataCommon
     {
         private ObservableCollection<DataItem> _items = new ObservableCollection<DataItem>();

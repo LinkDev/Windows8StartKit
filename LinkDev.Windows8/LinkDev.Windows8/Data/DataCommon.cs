@@ -11,6 +11,9 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// The base class for any app data class
+    /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
     public class DataCommon:BindableBase
     {

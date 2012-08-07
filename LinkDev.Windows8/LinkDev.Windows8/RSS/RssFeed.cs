@@ -10,6 +10,9 @@ using Windows.Data.Xml.Dom;
 
 namespace LinkDev.Windows8.RSS
 {
+    /// <summary>
+    /// A feed implementation that reads news like RSS feeds into a data group
+    /// </summary>
     public class RssFeed : FeedBase
     {
         public override async Task GetFeedAsync()

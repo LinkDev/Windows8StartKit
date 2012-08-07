@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// The class to be used or inherited to represent an app data item
+    /// </summary>
     public class DataItem: DataCommon
     {
         private string _content = string.Empty;

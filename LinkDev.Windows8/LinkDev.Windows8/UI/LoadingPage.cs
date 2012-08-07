@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Media;
 
 namespace LinkDev.Windows8.UI
 {
+    /// <summary>
+    /// A page that has a progress bar when any app feed is loading
+    /// </summary>
     public class LoadingPage: Page
     {
         private FeedsCollection feeds = null;

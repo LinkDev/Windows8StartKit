@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WORKPC-WINDOWS8</Machine>
+    <WindowsUser>Bishoy</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>2DE9A3DD096FA3EF198C952A0310203FE6BE2AB82FDE432BBEA93333EB32C972</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>30e3dcc5-9e5f-471a-a87c-45c6bada064e_1.0.0.0_neutral__tgh42jn7bdmrm</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>30e3dcc5-9e5f-471a-a87c-45c6bada064e_tgh42jn7bdmrm!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>30e3dcc5-9e5f-471a-a87c-45c6bada064e</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Bishoy</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-07T14:35:00.549</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\NewApp.exe">
+      <PackagePath>NewApp.exe</PackagePath>
+      <Modified>2012-08-07T15:04:26.124</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\NewApp.pdb">
+      <PackagePath>NewApp.pdb</PackagePath>
+      <Modified>2012-08-07T15:04:26.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pdb">
+      <PackagePath>LinkDev.Windows8.pdb</PackagePath>
+      <Modified>2012-08-07T15:04:23.786</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.dll">
+      <PackagePath>LinkDev.Windows8.dll</PackagePath>
+      <Modified>2012-08-07T15:04:23.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-07T14:34:16.004</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-20T02:54:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-20T02:54:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-20T02:54:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-20T02:54:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2012-01-27T20:21:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2012-01-27T20:21:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2012-01-27T20:21:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\About.xaml">
+      <PackagePath>About.xaml</PackagePath>
+      <Modified>2012-08-07T12:49:04.411</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-04-24T06:03:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\GroupedItemsPage.xaml">
+      <PackagePath>GroupedItemsPage.xaml</PackagePath>
+      <Modified>2012-08-07T14:40:44.870</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\GroupDetailPage.xaml">
+      <PackagePath>GroupDetailPage.xaml</PackagePath>
+      <Modified>2012-08-07T12:06:02.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\ItemDetailPage.xaml">
+      <PackagePath>ItemDetailPage.xaml</PackagePath>
+      <Modified>2012-08-07T12:54:57.463</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2012-08-07T12:06:01.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-08-07T14:35:00.330</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

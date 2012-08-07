@@ -12,6 +12,9 @@ using Windows.UI.Xaml;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// The base class for application data container. Every app should inherit from this one and add its own data collections to it.
+    /// </summary>
     public class AppDataBase : FeedsCollection
     {
         public static Type AppDataType { get; set; }
@@ -48,6 +51,7 @@ namespace LinkDev.Windows8.Data
             }
             catch (Exception ex)
             {
+                throw ex;
             }
         }
 

@@ -7,6 +7,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace LinkDev.Windows8.UI
 {
+    /// <summary>
+    /// A grid view that auto hide itself when it doesn't have any data
+    /// </summary>
     public class AutoHideGridView:GridView
     {
         public AutoHideGridView()

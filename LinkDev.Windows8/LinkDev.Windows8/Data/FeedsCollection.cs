@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// A class representing a collection of feeds
+    /// </summary>
     public class FeedsCollection: BindableBase
     {
         private ObservableCollection<FeedBase> _feeds = new ObservableCollection<FeedBase>();
@@ -99,6 +102,10 @@ namespace LinkDev.Windows8.Data
             }
         }
 
+        /// <summary>
+        /// Gets the data for all feeds that are pending update
+        /// </summary>
+        /// <returns></returns>
         public async Task GetFeedsDataAsync()
         {
             List<Task> requests = new List<Task>();
@@ -122,6 +129,22 @@ namespace LinkDev.Windows8.Data
                 if (feed.LastUpdateTime > LastUpdateTime)
                     LastUpdateTime = feed.LastUpdateTime;
             }
+        }
+
+        /// <summary>
+        /// Gets a feed by url, returns null if not found
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public FeedBase GetFeedByUrl(string url)
+        {
+            foreach (var feed in Feeds)
+            {
+                if (feed.Url == url)
+                    return feed;
+            }
+
+            return null;
         }
     }
 }

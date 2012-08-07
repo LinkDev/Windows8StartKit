@@ -10,6 +10,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace LinkDev.Windows8.UI
 {
+    /// <summary>
+    /// A grid view that change its item row/column spans according to item properties
+    /// </summary>
     public class VariableSizedGridView:GridView
     {
         protected override void PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject element, object item)

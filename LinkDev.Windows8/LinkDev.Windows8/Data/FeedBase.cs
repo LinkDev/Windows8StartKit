@@ -10,6 +10,9 @@ using Windows.UI.Notifications;
 
 namespace LinkDev.Windows8.Data
 {
+    /// <summary>
+    /// The base class for all feeds, when inherited it should provide functionality to read different feeds
+    /// </summary>
     public class FeedBase: BindableBase
     {
         private string _url = string.Empty;
@@ -68,28 +71,43 @@ namespace LinkDev.Windows8.Data
 
         public virtual void RefreshTileNotifications(Collection<DataItem> items)
         {
-            XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWideImageAndText01);
-
             TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
 
             for (int i = 4; i >= 0; i--)
             {
-                if (i <= items.Count)
-                {
-                    XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
+                XmlDocument wideTileImageXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWideImageAndText01);
+                XmlDocument wideTileTextXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWideText03);
+                XmlDocument squareTileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquareText04);
 
-                    foreach (var tileTextAttr in tileTextAttributes)
-                    {
-                        tileTextAttr.InnerText = items[i].Title;
-                    }
+                if (i < items.Count)
+                {
+                    XmlDocument wideTileXml = null;
 
                     if (items[i].ImagePath != null)
                     {
-                        XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
+                        wideTileXml = wideTileImageXml;
+
+                        //Wide image
+                        XmlNodeList tileImageAttributes = wideTileXml.GetElementsByTagName("image");
                         ((XmlElement)tileImageAttributes[0]).SetAttribute("src", items[i].ImagePath);
                     }
+                    else
+                    {
+                        //No image
+                        wideTileXml = wideTileTextXml;
+                    }
 
-                    TileNotification tileNotification = new TileNotification(tileXml);
+                    //Wide Text
+                    XmlNodeList tileTextAttributes = wideTileXml.GetElementsByTagName("text");
+                    ((XmlElement)tileTextAttributes[0]).InnerText = items[i].Title;
+
+                    XmlNodeList squareTileTextAttributes = squareTileXml.GetElementsByTagName("text");
+                    ((XmlElement)squareTileTextAttributes[0]).InnerText = items[i].Title;
+
+                    IXmlNode node = wideTileXml.ImportNode(squareTileXml.GetElementsByTagName("binding").Item(0), true);
+                    wideTileXml.GetElementsByTagName("visual").Item(0).AppendChild(node);
+
+                    TileNotification tileNotification = new TileNotification(wideTileXml);
                     TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
                 }
             }

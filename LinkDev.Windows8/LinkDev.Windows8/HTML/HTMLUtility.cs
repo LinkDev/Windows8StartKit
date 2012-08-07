@@ -10,6 +10,9 @@ using LinkDev.Windows8.Data;
 
 namespace LinkDev.Windows8.HTML
 {
+    /// <summary>
+    /// A helper class that provides HTML related functions
+    /// </summary>
     public class HTMLUtility
     {
         /// <summary>
