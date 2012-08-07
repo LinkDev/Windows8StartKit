@@ -14,4 +14,8 @@ Features
 - Show progress bar when a feed is being loaded.
 - Preserve memory usage by unloading images after closing a page.
 - Helper classes for easier XAML data binding.
-- A NewApp project that serve a quick start application project that make use of the library functionalities.
+- NewApp project that serve as a quick start application project that make use of the library functionalities.
+
+Getting started
+---------------
+Start your app development by reading the [getting started wiki](https://github.com/LinkDev/Windows8StartKit/wiki)
