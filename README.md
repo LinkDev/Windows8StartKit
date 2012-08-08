@@ -5,16 +5,16 @@ A code library, sample application, and set of articles that will give your Wind
 
 Features
 --------
-- A set of extensible classes representing common applications data.
-- An app data container class that provides auto saving and loading for your custom app data in local storage.
-- Read multiple types of feeds including RSS and customizable for your custom sources.
+- NewApp project that uses the library features and will give you a fast start.
+- A set of classes for common applications data.
+- Auto saving/loading for your app data in local cache.
+- Read multiple feeds including RSS or customize your own.
 - Schedule feeds to refresh every time interval.
 - Show live tile notifications.
-- Enable sharing data items through the Share contract.
+- Enable content sharing.
 - Show progress bar when a feed is being loaded.
-- Preserve memory usage by unloading images after closing a page.
-- Helper classes for easier XAML data binding.
-- NewApp project that serve as a quick start application project that make use of the library functionalities.
+- Preserve memory usage by disposing images after closing a page.
+- Helper classes for easy XAML data binding.
 
 Getting started
 ---------------
