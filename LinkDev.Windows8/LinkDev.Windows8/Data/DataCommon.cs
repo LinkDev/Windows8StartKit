@@ -112,8 +112,12 @@ namespace LinkDev.Windows8.Data
 
         public virtual void EnableShare()
         {
-            DataTransferManager.GetForCurrentView().DataRequested -= DataRequested;
-            DataTransferManager.GetForCurrentView().DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(this.DataRequested);
+            try
+            {
+                DataTransferManager.GetForCurrentView().DataRequested -= DataRequested;
+                DataTransferManager.GetForCurrentView().DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(this.DataRequested);
+            }
+            catch { }
         }
 
         public virtual void DisableShare()

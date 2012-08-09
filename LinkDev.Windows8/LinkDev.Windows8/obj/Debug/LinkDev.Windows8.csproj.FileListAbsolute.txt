@@ -40,3 +40,17 @@ C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windo
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LanguageQualifiers.txt
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.dll
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pdb
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pri
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.dll
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LinkDev.Windows8.pdb
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\LanguageQualifiers.txt
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\priconfig.xml.intermediate
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\layout.resfiles.intermediate
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\resources.resfiles.intermediate
+D:\Projects\Windows8\LinkDev.Windows8\LinkDev.Windows8\obj\Debug\pri.resfiles.intermediate

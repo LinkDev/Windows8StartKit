@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace LinkDev.Windows8.Data
 {
@@ -13,6 +14,7 @@ namespace LinkDev.Windows8.Data
     public class FeedsCollection: BindableBase
     {
         private ObservableCollection<FeedBase> _feeds = new ObservableCollection<FeedBase>();
+        [XmlIgnore]
         public ObservableCollection<FeedBase> Feeds
         {
             get { return this._feeds; }

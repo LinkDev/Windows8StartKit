@@ -50,7 +50,9 @@ namespace LinkDev.Windows8.Data
 
         public virtual void PrepareGroupForBinding()
         {
-           // ItemsSummary.Clear();
+            if(ItemsSummary.Count>0)
+                ItemsSummary.Clear();
+
             for (int i = 0; i < SummaryItemsCount && i<Items.Count; i++)
             {
                 DataItem item = Items[i];

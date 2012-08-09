@@ -15,6 +15,16 @@ namespace LinkDev.Windows8.RSS
     /// </summary>
     public class RssFeed : FeedBase
     {
+        /// <summary>
+        /// This property is used to replace text elements in the image path, may be to get larger images
+        /// </summary>
+        public string FindImagePath { get; set; }
+        
+        /// <summary>
+        /// This property is used to replace text elements in the image path, may be to get larger images
+        /// </summary>
+        public string ReplaceImagePath { get; set; }
+
         public override async Task GetFeedAsync()
         {
             try
@@ -59,14 +69,17 @@ namespace LinkDev.Windows8.RSS
                         feedItem.Url = feedItem.UniqueId = item.SelectSingleNode("link").InnerText;
 
                         //Try to find the image in non standard RSS feeds
-                        //TODO: to be fixed per app
                         Match m = Regex.Match(itemXML.ToLower(), "<image>(.*.jpg)</image>");
                         if (m.Success)
                         {
                             string image = m.Groups[1].Value;
-                            image = image.Replace("_s2.jpg", "_s4.jpg").Replace("media_thumbnail", "highslide_zoom").Replace("/small/", "/large/").Replace("sites/", "http://www.almasryalyoum.com/sites/");
-                            feedItem.SetImage(image);
-                            feedItem.HasImage = true;
+                            if (image != null)
+                            {
+                                if (string.IsNullOrEmpty(FindImagePath) == false && string.IsNullOrEmpty(ReplaceImagePath) == false)
+                                    image = image.Replace(FindImagePath, ReplaceImagePath);
+                                feedItem.SetImage(image);
+                                feedItem.HasImage = true;
+                            }
                         }
                         else
                         {
@@ -74,8 +87,14 @@ namespace LinkDev.Windows8.RSS
                             if (m2.Success)
                             {
                                 string image = m2.Groups[3].Value;
-                                image = image.Replace("_s2.jpg", "_s4.jpg").Replace("media_thumbnail", "highslide_zoom").Replace("/small/", "/large/").Replace("sites/", "http://www.almasryalyoum.com/sites/");
-                                feedItem.SetImage(image);
+                                if (image != null)
+                                {
+                                    if (string.IsNullOrEmpty(FindImagePath) == false && string.IsNullOrEmpty(ReplaceImagePath) == false)
+                                        image = image.Replace(FindImagePath, ReplaceImagePath);
+
+                                    feedItem.SetImage(image);
+                                    feedItem.HasImage = true;
+                                }
                             }
                         }
 
