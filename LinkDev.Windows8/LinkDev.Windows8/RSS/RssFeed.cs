@@ -122,7 +122,7 @@ namespace LinkDev.Windows8.RSS
                 else
                 {
                     this.ErrorMessage = "لا يوجد اتصال بالانترنت.";
-                    this.State = FeedState.Error;
+                    this.State = FeedState.Offline;
                 }
             }
             catch (Exception ex)

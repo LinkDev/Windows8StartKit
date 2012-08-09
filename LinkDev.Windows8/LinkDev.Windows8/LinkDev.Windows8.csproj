@@ -18,6 +18,7 @@
     <SccLocalPath>.</SccLocalPath>
     <SccAuxPath>http://10.2.2.209:8080/tfs/tfs08datatcollection</SccAuxPath>
     <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <ExpressionBlendVersion>5.0.30514.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,13 +112,30 @@
     <Compile Include="Data\FeedsCollection.cs" />
     <Compile Include="Data\FeedState.cs" />
     <Compile Include="Helpers\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Helpers\BindingHelper.cs" />
     <Compile Include="HTML\HTMLUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\DataItem.cs" />
     <Compile Include="RSS\RssFeed.cs" />
     <Compile Include="UI\AutoHideGridView.cs" />
+    <Compile Include="UI\Error.xaml.cs">
+      <DependentUpon>Error.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\LoadingPage.cs" />
+    <Compile Include="UI\OfflineError.xaml.cs">
+      <DependentUpon>OfflineError.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\VariableSizedGridView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\Error.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\OfflineError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

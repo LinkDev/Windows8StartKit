@@ -9,6 +9,8 @@ using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Data;
+using LinkDev.Windows8.Helpers;
 
 namespace LinkDev.Windows8.UI
 {
@@ -24,15 +26,16 @@ namespace LinkDev.Windows8.UI
             set
             {
                 feeds = value;
-                feeds.PropertyChanged += feeds_PropertyChanged;
 
-                feeds_PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("IsLoading"));
-                feeds_PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("IsError"));
+                BindingHelper.SetBinding(progress, ProgressBar.VisibilityProperty, feeds, "IsLoading", new BooleanToVisibilityConverter());
+                BindingHelper.SetBinding(error, ProgressBar.VisibilityProperty, feeds, "IsError", new BooleanToVisibilityConverter());
+                BindingHelper.SetBinding(offlineError, ProgressBar.VisibilityProperty, feeds, "IsOffline", new BooleanToVisibilityConverter());
             }
         }
 
         protected ProgressBar progress;
-        protected bool isError = false;
+        protected Error error;
+        protected OfflineError offlineError;
 
         public event EventHandler LoadingCompleted;
 
@@ -40,59 +43,31 @@ namespace LinkDev.Windows8.UI
         {
             this.Loaded += (sender, e) =>
             {
+                //ProgressBar
                 progress = new ProgressBar();
                 progress.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
                 progress.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Center;
+                progress.IsIndeterminate = true;
+                progress.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 progress.Width = 400;
-
                 ((Grid)this.Content).Children.Add(progress);
+
+                //Error
+                error = new Error();
+                error.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                error.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Right;
+                error.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                error.Margin = new Thickness(0, 0, 30, 0);
+                ((Grid)this.Content).Children.Add(error);
+
+                //OfflineError
+                offlineError = new OfflineError();
+                offlineError.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+                offlineError.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Right;
+                offlineError.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                offlineError.Margin = new Thickness(0, 0, 130, 0);
+                ((Grid)this.Content).Children.Add(offlineError);
             };
-        }
-
-        private void feeds_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            switch (e.PropertyName)
-            {
-                case "IsLoading":
-                    progress.IsIndeterminate = feeds.IsLoading;
-                    if (feeds.IsLoading == true)
-                        progress.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                    else
-                    {
-                        progress.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                        if (LoadingCompleted != null)
-                            LoadingCompleted(this, null);
-                    }
-                    break;
-
-                case "IsError":
-                    if (feeds.IsError != this.isError)
-                    {
-                        this.isError = feeds.IsError;
-                        if (this.isError == true)
-                        {
-                            ShowErrorAsync();
-                        }
-                    }
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-        private async void ShowErrorAsync()
-        {
-            try
-            {
-                MessageDialog msg = new MessageDialog("لقد حدث خطأ فى التحميل. من فضلك تأكد من اتصالك بالانترنت ثم حاول مرة اخرى.");
-                msg.Title = "حدث خطأ";
-                msg.Commands.Add(new UICommand("موافق"));
-
-                await msg.ShowAsync();
-                feeds.IsError = false;
-            }
-            catch { }
         }
     }
 }

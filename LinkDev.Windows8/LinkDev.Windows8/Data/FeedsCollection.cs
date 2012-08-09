@@ -42,6 +42,17 @@ namespace LinkDev.Windows8.Data
             }
         }
 
+        private bool _isOffline = false;
+        public bool IsOffline
+        {
+            get { return this._isOffline; }
+            set
+            {
+                if (_isOffline != value)
+                    this.SetProperty(ref this._isOffline, value);
+            }
+        }
+
         private DateTime _lastUpdateTime = DateTime.MinValue;
         public DateTime LastUpdateTime
         {
@@ -79,6 +90,8 @@ namespace LinkDev.Windows8.Data
             {
                 bool oneLoading = false;
                 bool oneError = false;
+                bool oneOffline = false;
+
                 foreach (var feed in _feeds)
                 {
                     if (feed.State == FeedState.Loading)
@@ -89,6 +102,11 @@ namespace LinkDev.Windows8.Data
                     if (feed.State == FeedState.Error)
                     {
                         oneError = true;
+                    }
+
+                    if (feed.State == FeedState.Offline)
+                    {
+                        oneOffline = true;
                     }
                 }
 
@@ -101,6 +119,11 @@ namespace LinkDev.Windows8.Data
                     IsError = false;
                 else
                     IsError = true;
+
+                if (oneOffline == false)
+                    IsOffline = false;
+                else
+                    IsOffline = true;
             }
         }
 

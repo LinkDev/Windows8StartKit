@@ -13,5 +13,6 @@ namespace LinkDev.Windows8.Data
         Empty,
         Loaded,
         Error,
+        Offline,
     }
 }
