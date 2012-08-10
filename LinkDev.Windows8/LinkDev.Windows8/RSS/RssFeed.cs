@@ -59,7 +59,7 @@ namespace LinkDev.Windows8.RSS
 
                         string itemXML = item.GetXml();
 
-                        feedItem.Content = Regex.Replace(item.SelectSingleNode("description").InnerText, @"<(.|\n)*?>", string.Empty).Replace("&#160;", "").Replace("&nbsp;", " ");
+                        feedItem.Content = HTML.HTMLUtility.ConvertHtmlToString(item.SelectSingleNode("description").InnerText);
 
                         if (feedItem.Content.Length > 100)
                             feedItem.Description = feedItem.Content.Substring(0, 100) + "...";
