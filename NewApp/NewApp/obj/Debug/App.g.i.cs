@@ -10,34 +10,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Diagnostics;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
 
 namespace NewApp
 {
 #if !DISABLE_XAML_GENERATED_MAIN
     public static class Program
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         static void Main(string[] args)
         {
-            Application.Start((p) => new App());
+            global::Windows.UI.Xaml.Application.Start((p) => new App());
         }
     }
 #endif
 
-    partial class App : Windows.UI.Xaml.Application
+    partial class App : global::Windows.UI.Xaml.Application
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private bool _contentLoaded;
 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void InitializeComponent()
         {
             if (_contentLoaded)
@@ -47,13 +41,13 @@ namespace NewApp
 #if DEBUG && !DISABLE_XAML_GENERATED_BINDING_DEBUG_OUTPUT
             DebugSettings.BindingFailed += (sender, args) =>
             {
-                Debug.WriteLine(args.Message);
+                global::System.Diagnostics.Debug.WriteLine(args.Message);
             };
 #endif
 #if DEBUG && !DISABLE_XAML_GENERATED_BREAK_ON_UNHANDLED_EXCEPTION
             UnhandledException += (sender, e) =>
             {
-                if (Debugger.IsAttached) Debugger.Break();
+                if (global::System.Diagnostics.Debugger.IsAttached) global::System.Diagnostics.Debugger.Break();
             };
 #endif
         }

@@ -10,18 +10,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class App : Windows.UI.Xaml.Application, IComponentConnector
+    partial class App : global::Windows.UI.Xaml.Application, global::Windows.UI.Xaml.Markup.IComponentConnector
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
  
         public void Connect(int connectionId, object target)
         {

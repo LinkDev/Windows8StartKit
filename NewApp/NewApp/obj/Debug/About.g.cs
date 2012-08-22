@@ -10,18 +10,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class About : Windows.UI.Xaml.Controls.UserControl, IComponentConnector
+    partial class About : global::Windows.UI.Xaml.Controls.UserControl, global::Windows.UI.Xaml.Markup.IComponentConnector
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
  
         public void Connect(int connectionId, object target)
         {
@@ -29,7 +23,7 @@ namespace NewApp
             {
             case 1:
                 #line 22 "..\..\About.xaml"
-                ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
+                ((global::Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
                  #line default
                  #line hidden
                 break;

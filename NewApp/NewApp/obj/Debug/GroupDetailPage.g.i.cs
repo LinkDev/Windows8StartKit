@@ -10,62 +10,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class GroupDetailPage : NewApp.Common.LayoutAwarePage
+    partial class GroupDetailPage : global::NewApp.Common.LayoutAwarePage
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private NewApp.Common.LayoutAwarePage pageRoot; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Data.CollectionViewSource itemsViewSource; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Controls.GridView itemGridView; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Controls.ListView itemListView; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Controls.Button backButton; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Controls.TextBlock pageTitle; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.VisualStateGroup ApplicationViewStates; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.VisualState FullScreenLandscape; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.VisualState Filled; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.VisualState FullScreenPortrait; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.VisualState Snapped; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::NewApp.Common.LayoutAwarePage pageRoot; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Data.CollectionViewSource itemsViewSource; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.GridView itemGridView; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.ListView itemListView; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button backButton; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBlock pageTitle; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.VisualStateGroup ApplicationViewStates; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.VisualState FullScreenLandscape; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.VisualState Filled; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.VisualState FullScreenPortrait; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.VisualState Snapped; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private bool _contentLoaded;
 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void InitializeComponent()
         {
             if (_contentLoaded)
                 return;
 
             _contentLoaded = true;
-            Application.LoadComponent(this, new System.Uri("ms-appx:///GroupDetailPage.xaml"), Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
+            global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///GroupDetailPage.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
-            pageRoot = (NewApp.Common.LayoutAwarePage)this.FindName("pageRoot");
-            itemsViewSource = (Windows.UI.Xaml.Data.CollectionViewSource)this.FindName("itemsViewSource");
-            itemGridView = (Windows.UI.Xaml.Controls.GridView)this.FindName("itemGridView");
-            itemListView = (Windows.UI.Xaml.Controls.ListView)this.FindName("itemListView");
-            backButton = (Windows.UI.Xaml.Controls.Button)this.FindName("backButton");
-            pageTitle = (Windows.UI.Xaml.Controls.TextBlock)this.FindName("pageTitle");
-            ApplicationViewStates = (Windows.UI.Xaml.VisualStateGroup)this.FindName("ApplicationViewStates");
-            FullScreenLandscape = (Windows.UI.Xaml.VisualState)this.FindName("FullScreenLandscape");
-            Filled = (Windows.UI.Xaml.VisualState)this.FindName("Filled");
-            FullScreenPortrait = (Windows.UI.Xaml.VisualState)this.FindName("FullScreenPortrait");
-            Snapped = (Windows.UI.Xaml.VisualState)this.FindName("Snapped");
+            pageRoot = (global::NewApp.Common.LayoutAwarePage)this.FindName("pageRoot");
+            itemsViewSource = (global::Windows.UI.Xaml.Data.CollectionViewSource)this.FindName("itemsViewSource");
+            itemGridView = (global::Windows.UI.Xaml.Controls.GridView)this.FindName("itemGridView");
+            itemListView = (global::Windows.UI.Xaml.Controls.ListView)this.FindName("itemListView");
+            backButton = (global::Windows.UI.Xaml.Controls.Button)this.FindName("backButton");
+            pageTitle = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("pageTitle");
+            ApplicationViewStates = (global::Windows.UI.Xaml.VisualStateGroup)this.FindName("ApplicationViewStates");
+            FullScreenLandscape = (global::Windows.UI.Xaml.VisualState)this.FindName("FullScreenLandscape");
+            Filled = (global::Windows.UI.Xaml.VisualState)this.FindName("Filled");
+            FullScreenPortrait = (global::Windows.UI.Xaml.VisualState)this.FindName("FullScreenPortrait");
+            Snapped = (global::Windows.UI.Xaml.VisualState)this.FindName("Snapped");
         }
     }
 }

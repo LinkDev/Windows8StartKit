@@ -35,7 +35,7 @@ C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\obj\Debug\NewApp
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\obj\Debug\About.g.i.cs
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\obj\Debug\About.g.cs
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\obj\Debug\About.xaml
-C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev.Windows8.dll
-C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev.Windows8.pdb
-C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev.Windows8.pri
 C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\obj\Debug\NewApp.csproj.GenerateResource.Cache
+C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev_Windows8.dll
+C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev_Windows8.pdb
+C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\LinkDev_Windows8.pri

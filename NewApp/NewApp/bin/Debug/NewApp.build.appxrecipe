@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>WORKPC-WINDOWS8</Machine>
+    <Machine>Bishoy-Labib</Machine>
     <WindowsUser>Bishoy</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
@@ -19,11 +19,11 @@
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\NewApp.pdb">
       <PackagePath>NewApp.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.pdb">
-      <PackagePath>LinkDev.Windows8.pdb</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev_Windows8.pdb">
+      <PackagePath>LinkDev_Windows8.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev.Windows8.dll">
-      <PackagePath>LinkDev.Windows8.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\LinkDev_Windows8.dll">
+      <PackagePath>LinkDev_Windows8.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\WideLogo.png">
       <PackagePath>Assets\WideLogo.png</PackagePath>
@@ -54,6 +54,9 @@
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\About.xaml">
       <PackagePath>About.xaml</PackagePath>
     </AppxPackagedFile>
@@ -69,8 +72,11 @@
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\App.xaml">
-      <PackagePath>App.xaml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\UI\Error.xaml">
+      <PackagePath>LinkDev_Windows8\UI\Error.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\LinkDev.Windows8\LinkDev.Windows8\bin\Debug\UI\OfflineError.xaml">
+      <PackagePath>LinkDev_Windows8\UI\OfflineError.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bishoy\Documents\GitHub\Windows8StartKit\NewApp\NewApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

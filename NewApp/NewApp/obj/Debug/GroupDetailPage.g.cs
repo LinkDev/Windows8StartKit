@@ -10,18 +10,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class GroupDetailPage : NewApp.Common.LayoutAwarePage, IComponentConnector
+    partial class GroupDetailPage : global::NewApp.Common.LayoutAwarePage, global::Windows.UI.Xaml.Markup.IComponentConnector
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
  
         public void Connect(int connectionId, object target)
         {
@@ -29,19 +23,19 @@ namespace NewApp
             {
             case 1:
                 #line 62 "..\..\GroupDetailPage.xaml"
-                ((Windows.UI.Xaml.Controls.ListViewBase)(target)).ItemClick += this.ItemView_ItemClick;
+                ((global::Windows.UI.Xaml.Controls.ListViewBase)(target)).ItemClick += this.ItemView_ItemClick;
                  #line default
                  #line hidden
                 break;
             case 2:
                 #line 91 "..\..\GroupDetailPage.xaml"
-                ((Windows.UI.Xaml.Controls.ListViewBase)(target)).ItemClick += this.ItemView_ItemClick;
+                ((global::Windows.UI.Xaml.Controls.ListViewBase)(target)).ItemClick += this.ItemView_ItemClick;
                  #line default
                  #line hidden
                 break;
             case 3:
                 #line 45 "..\..\GroupDetailPage.xaml"
-                ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
+                ((global::Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
                  #line default
                  #line hidden
                 break;

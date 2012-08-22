@@ -7,39 +7,35 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using Windows.UI.Xaml.Markup;
-using Windows.UI.Xaml;
-using NewApp.NewApp_XamlTypeInfo;
+
 
 namespace NewApp
 {
-    public partial class App : IXamlMetadataProvider
+    public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private XamlTypeInfoProvider _provider;
+        private global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
-        public IXamlType GetXamlType(Type type)
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
             if(_provider == null)
             {
-                _provider = new XamlTypeInfoProvider();
+                _provider = new global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
 
-        public IXamlType GetXamlType(String typeName)
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.String fullName)
         {
             if(_provider == null)
             {
-                _provider = new XamlTypeInfoProvider();
+                _provider = new global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider();
             }
-            return _provider.GetXamlTypeByName(typeName);
+            return _provider.GetXamlTypeByName(fullName);
         }
 
-        public XmlnsDefinition[] GetXmlnsDefinitions()
+        public global::Windows.UI.Xaml.Markup.XmlnsDefinition[] GetXmlnsDefinitions()
         {
-            return new XmlnsDefinition[0];
+            return new global::Windows.UI.Xaml.Markup.XmlnsDefinition[0];
         }
     }
 }
@@ -51,10 +47,10 @@ namespace NewApp.NewApp_XamlTypeInfo
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
-        public IXamlType GetXamlTypeByType(Type type)
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlTypeByType(global::System.Type type)
         {
             string standardName;
-            IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
             if(_xamlTypeToStandardName.TryGetValue(type, out standardName))
             {
                 xamlType = GetXamlTypeByName(standardName);
@@ -63,21 +59,29 @@ namespace NewApp.NewApp_XamlTypeInfo
             {
                 xamlType = GetXamlTypeByName(type.FullName);
             }
+            if(xamlType == null)
+            {
+                xamlType = CheckOtherMetadataProvidersForType(type);
+            }
             return xamlType;
         }
 
-        public IXamlType GetXamlTypeByName(string typeName)
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlTypeByName(string typeName)
         {
-            if (String.IsNullOrEmpty(typeName))
+            if (global::System.String.IsNullOrEmpty(typeName))
             {
                 return null;
             }
-            IXamlType xamlType;
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType;
             if (_xamlTypes.TryGetValue(typeName, out xamlType))
             {
                 return xamlType;
             }
             xamlType = CreateXamlType(typeName);
+            if (xamlType == null)
+            {
+                xamlType = CheckOtherMetadataProvidersForName(typeName);
+            }
             if (xamlType != null)
             {
                 _xamlTypes.Add(typeName, xamlType);
@@ -85,13 +89,13 @@ namespace NewApp.NewApp_XamlTypeInfo
             return xamlType;
         }
 
-        public IXamlMember GetMemberByLongName(string longMemberName)
+        public global::Windows.UI.Xaml.Markup.IXamlMember GetMemberByLongName(string longMemberName)
         {
-            if (String.IsNullOrEmpty(longMemberName))
+            if (global::System.String.IsNullOrEmpty(longMemberName))
             {
                 return null;
             }
-            IXamlMember xamlMember;
+            global::Windows.UI.Xaml.Markup.IXamlMember xamlMember;
             if (_xamlMembers.TryGetValue(longMemberName, out xamlMember))
             {
                 return xamlMember;
@@ -104,11 +108,11 @@ namespace NewApp.NewApp_XamlTypeInfo
             return xamlMember;
         }
 
-        Dictionary<string, IXamlType> _xamlTypes = new Dictionary<string, IXamlType>();
-        Dictionary<string, IXamlMember> _xamlMembers = new Dictionary<string, IXamlMember>();
-        Dictionary<Type, string> _xamlTypeToStandardName = new Dictionary<Type, string>();
+        global::System.Collections.Generic.Dictionary<string, global::Windows.UI.Xaml.Markup.IXamlType> _xamlTypes = new global::System.Collections.Generic.Dictionary<string, global::Windows.UI.Xaml.Markup.IXamlType>();
+        global::System.Collections.Generic.Dictionary<string, global::Windows.UI.Xaml.Markup.IXamlMember> _xamlMembers = new global::System.Collections.Generic.Dictionary<string, global::Windows.UI.Xaml.Markup.IXamlMember>();
+        global::System.Collections.Generic.Dictionary<global::System.Type, string> _xamlTypeToStandardName = new global::System.Collections.Generic.Dictionary<global::System.Type, string>();
 
-        private void AddToMapOfTypeToStandardName(Type t, String str)
+        private void AddToMapOfTypeToStandardName(global::System.Type t, global::System.String str)
         {
             if(!_xamlTypeToStandardName.ContainsKey(t))
             {
@@ -116,98 +120,98 @@ namespace NewApp.NewApp_XamlTypeInfo
             }
         }
 
-        private object Activate_0_About() { return new NewApp.About(); }
+        private object Activate_0_About() { return new global::NewApp.About(); }
 
-        private object Activate_1_LayoutAwarePage() { return new NewApp.Common.LayoutAwarePage(); }
+        private object Activate_1_LayoutAwarePage() { return new global::NewApp.Common.LayoutAwarePage(); }
 
-        private object Activate_2_LoadingPage() { return new LinkDev.Windows8.UI.LoadingPage(); }
+        private object Activate_2_LoadingPage() { return new global::LinkDev.Windows8.UI.LoadingPage(); }
 
-        private object Activate_3_FeedsCollection() { return new LinkDev.Windows8.Data.FeedsCollection(); }
+        private object Activate_3_FeedsCollection() { return new global::LinkDev.Windows8.Data.FeedsCollection(); }
 
-        private object Activate_5_GroupedItemsPage() { return new NewApp.GroupedItemsPage(); }
+        private object Activate_5_GroupedItemsPage() { return new global::NewApp.GroupedItemsPage(); }
 
-        private object Activate_6_GroupDetailPage() { return new NewApp.GroupDetailPage(); }
+        private object Activate_6_GroupDetailPage() { return new global::NewApp.GroupDetailPage(); }
 
-        private object Activate_7_RichTextColumns() { return new NewApp.Common.RichTextColumns(); }
+        private object Activate_7_RichTextColumns() { return new global::NewApp.Common.RichTextColumns(); }
 
-        private object Activate_8_ItemDetailPage() { return new NewApp.ItemDetailPage(); }
+        private object Activate_8_ItemDetailPage() { return new global::NewApp.ItemDetailPage(); }
 
 
-        private IXamlType CreateXamlType(string typeName)
+        private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
         {
-            XamlSystemBaseType xamlType = null;
-            XamlUserType userType;
+            global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::NewApp.NewApp_XamlTypeInfo.XamlUserType userType;
 
             switch (typeName)
             {
             case "Windows.UI.Xaml.Controls.UserControl":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.UserControl));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
             case "Windows.UI.Xaml.Controls.Page":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.Page));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
                 break;
 
             case "Object":
-                xamlType = new XamlSystemBaseType(typeName, typeof(System.Object));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::System.Object));
                 break;
 
             case "Windows.UI.Xaml.Controls.Panel":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.Panel));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Panel));
                 break;
 
             case "Windows.UI.Xaml.Controls.RichTextBlock":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.RichTextBlock));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.RichTextBlock));
                 break;
 
             case "Windows.UI.Xaml.DataTemplate":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.DataTemplate));
+                xamlType = new global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.DataTemplate));
                 break;
 
             case "NewApp.About":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.About), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.About), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_About;
                 xamlType = userType;
                 break;
 
             case "NewApp.Common.LayoutAwarePage":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.Common.LayoutAwarePage), GetXamlTypeByName("LinkDev.Windows8.UI.LoadingPage"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.Common.LayoutAwarePage), GetXamlTypeByName("LinkDev.Windows8.UI.LoadingPage"));
                 userType.Activator = Activate_1_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
             case "LinkDev.Windows8.UI.LoadingPage":
-                userType = new XamlUserType(this, typeName, typeof(LinkDev.Windows8.UI.LoadingPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::LinkDev.Windows8.UI.LoadingPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_2_LoadingPage;
                 userType.AddMemberName("Feeds");
                 xamlType = userType;
                 break;
 
             case "LinkDev.Windows8.Data.FeedsCollection":
-                userType = new XamlUserType(this, typeName, typeof(LinkDev.Windows8.Data.FeedsCollection), GetXamlTypeByName("LinkDev.Windows8.Data.BindableBase"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::LinkDev.Windows8.Data.FeedsCollection), GetXamlTypeByName("LinkDev.Windows8.Data.BindableBase"));
                 userType.Activator = Activate_3_FeedsCollection;
                 xamlType = userType;
                 break;
 
             case "LinkDev.Windows8.Data.BindableBase":
-                userType = new XamlUserType(this, typeName, typeof(LinkDev.Windows8.Data.BindableBase), GetXamlTypeByName("Object"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::LinkDev.Windows8.Data.BindableBase), GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case "NewApp.GroupedItemsPage":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.GroupedItemsPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.GroupedItemsPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
                 userType.Activator = Activate_5_GroupedItemsPage;
                 xamlType = userType;
                 break;
 
             case "NewApp.GroupDetailPage":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.GroupDetailPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.GroupDetailPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
                 userType.Activator = Activate_6_GroupDetailPage;
                 xamlType = userType;
                 break;
 
             case "NewApp.Common.RichTextColumns":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.Common.RichTextColumns), GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.Common.RichTextColumns), GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
                 userType.Activator = Activate_7_RichTextColumns;
                 userType.SetContentPropertyName("NewApp.Common.RichTextColumns.RichTextContent");
                 userType.AddMemberName("RichTextContent");
@@ -216,7 +220,7 @@ namespace NewApp.NewApp_XamlTypeInfo
                 break;
 
             case "NewApp.ItemDetailPage":
-                userType = new XamlUserType(this, typeName, typeof(NewApp.ItemDetailPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
+                userType = new global::NewApp.NewApp_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::NewApp.ItemDetailPage), GetXamlTypeByName("NewApp.Common.LayoutAwarePage"));
                 userType.Activator = Activate_8_ItemDetailPage;
                 xamlType = userType;
                 break;
@@ -225,61 +229,104 @@ namespace NewApp.NewApp_XamlTypeInfo
             return xamlType;
         }
 
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> _otherProviders;
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> OtherProviders
+        {
+            get
+            {
+                if(_otherProviders == null)
+                {
+                    _otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
+                    global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
+                    provider = new global::LinkDev.Windows8.LinkDev_Windows8_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    _otherProviders.Add(provider); 
+                }
+                return _otherProviders;
+            }
+        }
+
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForName(string typeName)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(typeName);
+                if(xamlType != null)
+                {
+                    return xamlType;
+                }
+            }
+            return null;
+        }
+
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForType(global::System.Type type)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(type);
+                if(xamlType != null)
+                {
+                    return xamlType;
+                }
+            }
+            return null;
+        }
 
         private object get_0_LoadingPage_Feeds(object instance)
         {
-            var that = (LinkDev.Windows8.UI.LoadingPage)instance;
+            var that = (global::LinkDev.Windows8.UI.LoadingPage)instance;
             return that.Feeds;
         }
         private void set_0_LoadingPage_Feeds(object instance, object Value)
         {
-            var that = (LinkDev.Windows8.UI.LoadingPage)instance;
-            that.Feeds = (LinkDev.Windows8.Data.FeedsCollection)Value;
+            var that = (global::LinkDev.Windows8.UI.LoadingPage)instance;
+            that.Feeds = (global::LinkDev.Windows8.Data.FeedsCollection)Value;
         }
         private object get_1_RichTextColumns_RichTextContent(object instance)
         {
-            var that = (NewApp.Common.RichTextColumns)instance;
+            var that = (global::NewApp.Common.RichTextColumns)instance;
             return that.RichTextContent;
         }
         private void set_1_RichTextColumns_RichTextContent(object instance, object Value)
         {
-            var that = (NewApp.Common.RichTextColumns)instance;
-            that.RichTextContent = (Windows.UI.Xaml.Controls.RichTextBlock)Value;
+            var that = (global::NewApp.Common.RichTextColumns)instance;
+            that.RichTextContent = (global::Windows.UI.Xaml.Controls.RichTextBlock)Value;
         }
         private object get_2_RichTextColumns_ColumnTemplate(object instance)
         {
-            var that = (NewApp.Common.RichTextColumns)instance;
+            var that = (global::NewApp.Common.RichTextColumns)instance;
             return that.ColumnTemplate;
         }
         private void set_2_RichTextColumns_ColumnTemplate(object instance, object Value)
         {
-            var that = (NewApp.Common.RichTextColumns)instance;
-            that.ColumnTemplate = (Windows.UI.Xaml.DataTemplate)Value;
+            var that = (global::NewApp.Common.RichTextColumns)instance;
+            that.ColumnTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
 
-        private IXamlMember CreateXamlMember(string longMemberName)
+        private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            XamlMember xamlMember = null;
-            XamlUserType userType;
+            global::NewApp.NewApp_XamlTypeInfo.XamlMember xamlMember = null;
+            global::NewApp.NewApp_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "LinkDev.Windows8.UI.LoadingPage.Feeds":
-                userType = (XamlUserType)GetXamlTypeByName("LinkDev.Windows8.UI.LoadingPage");
-                xamlMember = new XamlMember(this, "Feeds", "LinkDev.Windows8.Data.FeedsCollection");
+                userType = (global::NewApp.NewApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LinkDev.Windows8.UI.LoadingPage");
+                xamlMember = new global::NewApp.NewApp_XamlTypeInfo.XamlMember(this, "Feeds", "LinkDev.Windows8.Data.FeedsCollection");
                 xamlMember.Getter = get_0_LoadingPage_Feeds;
                 xamlMember.Setter = set_0_LoadingPage_Feeds;
                 break;
             case "NewApp.Common.RichTextColumns.RichTextContent":
-                userType = (XamlUserType)GetXamlTypeByName("NewApp.Common.RichTextColumns");
-                xamlMember = new XamlMember(this, "RichTextContent", "Windows.UI.Xaml.Controls.RichTextBlock");
+                userType = (global::NewApp.NewApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NewApp.Common.RichTextColumns");
+                xamlMember = new global::NewApp.NewApp_XamlTypeInfo.XamlMember(this, "RichTextContent", "Windows.UI.Xaml.Controls.RichTextBlock");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_1_RichTextColumns_RichTextContent;
                 xamlMember.Setter = set_1_RichTextColumns_RichTextContent;
                 break;
             case "NewApp.Common.RichTextColumns.ColumnTemplate":
-                userType = (XamlUserType)GetXamlTypeByName("NewApp.Common.RichTextColumns");
-                xamlMember = new XamlMember(this, "ColumnTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::NewApp.NewApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NewApp.Common.RichTextColumns");
+                xamlMember = new global::NewApp.NewApp_XamlTypeInfo.XamlMember(this, "ColumnTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_2_RichTextColumns_ColumnTemplate;
                 xamlMember.Setter = set_2_RichTextColumns_ColumnTemplate;
@@ -293,12 +340,12 @@ namespace NewApp.NewApp_XamlTypeInfo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlSystemBaseType : IXamlType
+    internal class XamlSystemBaseType : global::Windows.UI.Xaml.Markup.IXamlType
     {
         string _fullName;
-        Type _underlyingType;
+        global::System.Type _underlyingType;
 
-        public XamlSystemBaseType(string fullName, Type underlyingType)
+        public XamlSystemBaseType(string fullName, global::System.Type underlyingType)
         {
             _fullName = fullName;
             _underlyingType = underlyingType;
@@ -306,7 +353,7 @@ namespace NewApp.NewApp_XamlTypeInfo
 
         public string FullName { get { return _fullName; } }
 
-        public Type UnderlyingType
+        public global::System.Type UnderlyingType
         {
             get
             {
@@ -314,22 +361,22 @@ namespace NewApp.NewApp_XamlTypeInfo
             }
         }
 
-        virtual public IXamlType BaseType { get { throw new NotImplementedException(); } }
-        virtual public IXamlMember ContentProperty { get { throw new NotImplementedException(); } }
-        virtual public IXamlMember GetMember(string name) { throw new NotImplementedException(); }
-        virtual public bool IsArray { get { throw new NotImplementedException(); } }
-        virtual public bool IsCollection { get { throw new NotImplementedException(); } }
-        virtual public bool IsConstructible { get { throw new NotImplementedException(); } }
-        virtual public bool IsDictionary { get { throw new NotImplementedException(); } }
-        virtual public bool IsMarkupExtension { get { throw new NotImplementedException(); } }
-        virtual public bool IsBindable { get { throw new NotImplementedException(); } }
-        virtual public IXamlType ItemType { get { throw new NotImplementedException(); } }
-        virtual public IXamlType KeyType { get { throw new NotImplementedException(); } }
-        virtual public object ActivateInstance() { throw new NotImplementedException(); }
-        virtual public void AddToMap(object instance, object key, object item)  { throw new NotImplementedException(); }
-        virtual public void AddToVector(object instance, object item)  { throw new NotImplementedException(); }
-        virtual public void RunInitializer()   { throw new NotImplementedException(); }
-        virtual public object CreateFromString(String input)   { throw new NotImplementedException(); }
+        virtual public global::Windows.UI.Xaml.Markup.IXamlType BaseType { get { throw new global::System.NotImplementedException(); } }
+        virtual public global::Windows.UI.Xaml.Markup.IXamlMember ContentProperty { get { throw new global::System.NotImplementedException(); } }
+        virtual public global::Windows.UI.Xaml.Markup.IXamlMember GetMember(string name) { throw new global::System.NotImplementedException(); }
+        virtual public bool IsArray { get { throw new global::System.NotImplementedException(); } }
+        virtual public bool IsCollection { get { throw new global::System.NotImplementedException(); } }
+        virtual public bool IsConstructible { get { throw new global::System.NotImplementedException(); } }
+        virtual public bool IsDictionary { get { throw new global::System.NotImplementedException(); } }
+        virtual public bool IsMarkupExtension { get { throw new global::System.NotImplementedException(); } }
+        virtual public bool IsBindable { get { throw new global::System.NotImplementedException(); } }
+        virtual public global::Windows.UI.Xaml.Markup.IXamlType ItemType { get { throw new global::System.NotImplementedException(); } }
+        virtual public global::Windows.UI.Xaml.Markup.IXamlType KeyType { get { throw new global::System.NotImplementedException(); } }
+        virtual public object ActivateInstance() { throw new global::System.NotImplementedException(); }
+        virtual public void AddToMap(object instance, object key, object item)  { throw new global::System.NotImplementedException(); }
+        virtual public void AddToVector(object instance, object item)  { throw new global::System.NotImplementedException(); }
+        virtual public void RunInitializer()   { throw new global::System.NotImplementedException(); }
+        virtual public object CreateFromString(global::System.String input)   { throw new global::System.NotImplementedException(); }
     }
     
     internal delegate object Activator();
@@ -339,10 +386,10 @@ namespace NewApp.NewApp_XamlTypeInfo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : XamlSystemBaseType
+    internal class XamlUserType : global::NewApp.NewApp_XamlTypeInfo.XamlSystemBaseType
     {
-        XamlTypeInfoProvider _provider;
-        IXamlType _baseType;
+        global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
         bool _isBindable;
@@ -350,10 +397,10 @@ namespace NewApp.NewApp_XamlTypeInfo
         string _contentPropertyName;
         string _itemTypeName;
         string _keyTypeName;
-        Dictionary<string, string> _memberNames;
-        Dictionary<string, object> _enumValues;
+        global::System.Collections.Generic.Dictionary<string, string> _memberNames;
+        global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(XamlTypeInfoProvider provider, string fullName, Type fullType, IXamlType baseType)
+        public XamlUserType(global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -362,7 +409,7 @@ namespace NewApp.NewApp_XamlTypeInfo
 
         // --- Interface methods ----
 
-        override public IXamlType BaseType { get { return _baseType; } }
+        override public global::Windows.UI.Xaml.Markup.IXamlType BaseType { get { return _baseType; } }
         override public bool IsArray { get { return _isArray; } }
         override public bool IsCollection { get { return (CollectionAdd != null); } }
         override public bool IsConstructible { get { return (Activator != null); } }
@@ -370,22 +417,22 @@ namespace NewApp.NewApp_XamlTypeInfo
         override public bool IsMarkupExtension { get { return _isMarkupExtension; } }
         override public bool IsBindable { get { return _isBindable; } }
 
-        override public IXamlMember ContentProperty
+        override public global::Windows.UI.Xaml.Markup.IXamlMember ContentProperty
         {
             get { return _provider.GetMemberByLongName(_contentPropertyName); }
         }
 
-        override public IXamlType ItemType
+        override public global::Windows.UI.Xaml.Markup.IXamlType ItemType
         {
             get { return _provider.GetXamlTypeByName(_itemTypeName); }
         }
 
-        override public IXamlType KeyType
+        override public global::Windows.UI.Xaml.Markup.IXamlType KeyType
         {
             get { return _provider.GetXamlTypeByName(_keyTypeName); }
         }
 
-        override public IXamlMember GetMember(string name)
+        override public global::Windows.UI.Xaml.Markup.IXamlMember GetMember(string name)
         {
             if (_memberNames == null)
             {
@@ -419,39 +466,39 @@ namespace NewApp.NewApp_XamlTypeInfo
             System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
         }
 
-        override public Object CreateFromString(String input)
+        override public global::System.Object CreateFromString(global::System.String input)
         {
             if (_enumValues != null)
             {
-                Int32 value = 0;
+                global::System.Int32 value = 0;
 
                 string[] valueParts = input.Split(',');
 
                 foreach (string valuePart in valueParts) 
                 {
                     object partValue;
-                    Int32 enumFieldValue = 0;
+                    global::System.Int32 enumFieldValue = 0;
                     try
                     {
                         if (_enumValues.TryGetValue(valuePart.Trim(), out partValue))
                         {
-                            enumFieldValue = Convert.ToInt32(partValue);
+                            enumFieldValue = global::System.Convert.ToInt32(partValue);
                         }
                         else
                         {
                             try
                             {
-                                enumFieldValue = Convert.ToInt32(valuePart.Trim());
+                                enumFieldValue = global::System.Convert.ToInt32(valuePart.Trim());
                             }
-                            catch( FormatException )
+                            catch( global::System.FormatException )
                             {
                                 foreach( string key in _enumValues.Keys )
                                 {
-                                    if( String.Compare(valuePart.Trim(), key, System.StringComparison.OrdinalIgnoreCase) == 0 )
+                                    if( global::System.String.Compare(valuePart.Trim(), key, global::System.StringComparison.OrdinalIgnoreCase) == 0 )
                                     {
                                         if( _enumValues.TryGetValue(key.Trim(), out partValue) )
                                         {
-                                            enumFieldValue = Convert.ToInt32(partValue);
+                                            enumFieldValue = global::System.Convert.ToInt32(partValue);
                                             break;
                                         }
                                     }
@@ -460,15 +507,15 @@ namespace NewApp.NewApp_XamlTypeInfo
                         }
                         value |= enumFieldValue; 
                     }
-                    catch( FormatException )
+                    catch( global::System.FormatException )
                     {
-                        throw new ArgumentException(input, FullName);
+                        throw new global::System.ArgumentException(input, FullName);
                     }
                 }
 
                 return value; 
             }
-            throw new ArgumentException(input, FullName);
+            throw new global::System.ArgumentException(input, FullName);
         }
 
         // --- End of Interface methods
@@ -511,7 +558,7 @@ namespace NewApp.NewApp_XamlTypeInfo
         {
             if(_memberNames == null)
             {
-                _memberNames =  new Dictionary<string,string>();
+                _memberNames =  new global::System.Collections.Generic.Dictionary<string,string>();
             }
             _memberNames.Add(shortName, FullName + "." + shortName);
         }
@@ -520,7 +567,7 @@ namespace NewApp.NewApp_XamlTypeInfo
         {
             if (_enumValues == null)
             {
-                _enumValues = new Dictionary<string, object>();
+                _enumValues = new global::System.Collections.Generic.Dictionary<string, object>();
             }
             _enumValues.Add(name, value);
         }
@@ -532,9 +579,9 @@ namespace NewApp.NewApp_XamlTypeInfo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlMember : IXamlMember
+    internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        XamlTypeInfoProvider _provider;
+        global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -543,7 +590,7 @@ namespace NewApp.NewApp_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::NewApp.NewApp_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;
@@ -552,16 +599,16 @@ namespace NewApp.NewApp_XamlTypeInfo
 
         public string Name { get { return _name; } }
 
-        public IXamlType Type
+        public global::Windows.UI.Xaml.Markup.IXamlType Type
         {
             get { return _provider.GetXamlTypeByName(_typeName); }
         }
 
-        public void SetTargetTypeName(String targetTypeName)
+        public void SetTargetTypeName(global::System.String targetTypeName)
         {
             _targetTypeName = targetTypeName;
         }
-        public IXamlType TargetType
+        public global::Windows.UI.Xaml.Markup.IXamlType TargetType
         {
             get { return _provider.GetXamlTypeByName(_targetTypeName); }
         }
@@ -581,7 +628,7 @@ namespace NewApp.NewApp_XamlTypeInfo
             if (Getter != null)
                 return Getter(instance);
             else
-                throw new InvalidOperationException("GetValue");
+                throw new global::System.InvalidOperationException("GetValue");
         }
 
         public Setter Setter { get; set; }
@@ -590,7 +637,7 @@ namespace NewApp.NewApp_XamlTypeInfo
             if (Setter != null)
                 Setter(instance, value);
             else
-                throw new InvalidOperationException("SetValue");
+                throw new global::System.InvalidOperationException("SetValue");
         }
     }
 }

@@ -10,32 +10,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class About : Windows.UI.Xaml.Controls.UserControl
+    partial class About : global::Windows.UI.Xaml.Controls.UserControl
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private Windows.UI.Xaml.Controls.Button backButton; 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button backButton; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private bool _contentLoaded;
 
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void InitializeComponent()
         {
             if (_contentLoaded)
                 return;
 
             _contentLoaded = true;
-            Application.LoadComponent(this, new System.Uri("ms-appx:///About.xaml"), Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
+            global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///About.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
-            backButton = (Windows.UI.Xaml.Controls.Button)this.FindName("backButton");
+            backButton = (global::Windows.UI.Xaml.Controls.Button)this.FindName("backButton");
         }
     }
 }

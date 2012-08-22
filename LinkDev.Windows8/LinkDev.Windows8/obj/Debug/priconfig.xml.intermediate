@@ -10,8 +10,8 @@
     <default>
       <qualifier name="language" value="en-US" />
     </default>
-    <indexer-config type="RESW" convertDotsToSlashes="true" initialPath="LinkDev.Windows8" />
-    <indexer-config type="RESJSON" />
+    <indexer-config type="RESW" convertDotsToSlashes="true" initialPath="LinkDev_Windows8" />
+    <indexer-config type="RESJSON" initialPath="LinkDev_Windows8" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
   <index root="\" startIndexAt="obj\Debug\pri.resfiles">

@@ -10,18 +10,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-
 namespace NewApp
 {
-    partial class ItemDetailPage : NewApp.Common.LayoutAwarePage, IComponentConnector
+    partial class ItemDetailPage : global::NewApp.Common.LayoutAwarePage, global::Windows.UI.Xaml.Markup.IComponentConnector
     {
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
  
         public void Connect(int connectionId, object target)
         {
@@ -29,23 +23,23 @@ namespace NewApp
             {
             case 1:
                 #line 61 "..\..\ItemDetailPage.xaml"
-                ((Windows.UI.Xaml.Controls.Primitives.Selector)(target)).SelectionChanged += this.flipView_SelectionChanged;
+                ((global::Windows.UI.Xaml.Controls.Primitives.Selector)(target)).SelectionChanged += this.flipView_SelectionChanged;
                  #line default
                  #line hidden
                 break;
             case 2:
                 #line 70 "..\..\ItemDetailPage.xaml"
-                ((Windows.UI.Xaml.FrameworkElement)(target)).Loaded += this.StartLayoutUpdates;
+                ((global::Windows.UI.Xaml.FrameworkElement)(target)).Loaded += this.StartLayoutUpdates;
                  #line default
                  #line hidden
                 #line 70 "..\..\ItemDetailPage.xaml"
-                ((Windows.UI.Xaml.FrameworkElement)(target)).Unloaded += this.StopLayoutUpdates;
+                ((global::Windows.UI.Xaml.FrameworkElement)(target)).Unloaded += this.StopLayoutUpdates;
                  #line default
                  #line hidden
                 break;
             case 3:
                 #line 45 "..\..\ItemDetailPage.xaml"
-                ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
+                ((global::Windows.UI.Xaml.Controls.Primitives.ButtonBase)(target)).Click += this.GoBack;
                  #line default
                  #line hidden
                 break;
